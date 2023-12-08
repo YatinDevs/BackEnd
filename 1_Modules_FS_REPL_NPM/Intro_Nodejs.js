@@ -70,8 +70,19 @@ import {sum} from './lib.js'
 
 ! FileSystem
 
+- FileSystem Module(fs) is one of core modules of Node JS. 
+fs can be used to read/write any file. There are many more core modules
+in NodeJS which you can check in NodeJS API docs.
+
+- Reading files can be Synchronous or Asynchronous. Async is most preferred
+ method in NodeJS. As there is NO blocking of I/O in NodeJS
+
 
 ! Package.json
+
+* package.json is a configuration file for node projects which has 
+scripts, dependencies, devDependencies etc
+
 Defination :
 * A module is a single JavaScript file that has some reasonable functionality.
 * A package is a directory with one or more modules inside of it and a package.json
@@ -107,18 +118,15 @@ file which has metadata about the package.
 // In Nodejs Mostly we Do Asynchronous Work.
 
 /*
- Topics Overview : 
- Document Reference :- https://nodejs.org/en/docs
- 1. Module System :
+! Topics Overview : 
+* Document Reference :- https://nodejs.org/en/docs
+? 1. Module System :
    - CJS modules.
    - ES6 Modules.
- 2. REPL.
- 3. File System Module.
- 4. Package.json - (All about)
+? 2. REPL.
+? 3. File System Module.
+? 4. Package.json - (All about)
   -  NPM - https://www.npmjs.com/
 
-  - npm install nodemon --save-dev
-
-  - npm install --global nodemon
 
 */
