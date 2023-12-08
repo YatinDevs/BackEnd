@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Balance - DOM</title>
+    <link rel="stylesheet" href="index4.css"/>
+    <script src="index4.js" defer></script>
+</head>
+<body>
+    <!-- -->
+
+   <div id="max-sum-holder">
+      <label for="max-sum">Input Max Sum : </label>
+      <input type="number" value="50" id="max-sum" onchange="maxSumChange()">
+   </div>
+    <!-- -->
+
+   <div id="range-a-holder">
+     <label for="range-a">Range A: </label>
+     <input type="range"  id="range-a"  min="0" max="0" value="0" onchange="rangeAChange(event)">
+     <div id="range-a-value">0</div>
+     
+   </div>
+    <!-- -->
+
+   <div id="range-b-holder">
+        <label for="range-b">Range B: </label>
+        <input type="range" id="range-b" min="0" max="50" value="50" onchange="rangeBChange(event)" >
+        <div id="range-b-value">50</div>
+    
+   </div>
+       <!-- -->
+  <div id="sum">
+      Sum: <span id="sum-value">50</span>
+  </div>
+
+</body>
+</html>

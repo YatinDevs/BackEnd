@@ -42,3 +42,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
     },
   - npm run start
+
+# global install
+
+- npm install --global nodemon
+
+- Error on terminal: nodemon.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
+
+I have a solution to fix the issue by this way:
+
+1. Open Windows PowerShell with Run as Administrator
+2. Run this command: Set-ExecutionPolicy Unrestricted
