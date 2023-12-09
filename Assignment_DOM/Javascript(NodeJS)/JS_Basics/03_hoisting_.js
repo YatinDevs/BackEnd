@@ -1,4 +1,4 @@
-// ? 4. hoisting.
+// !. hoisting.
 
 /*
    JavaScript Hoisting refers to the process whereby the interpreter
@@ -9,7 +9,7 @@
 
 // ? four function declarations below are hoisted with type 1 behavior;
 
-// * Type 1 - Hoisting with Value:
+// ? Type 1 - Hoisting with Value:
 
 // Applies to function declarations and import declarations.
 
@@ -19,7 +19,7 @@ function f1() {
   console.log("I am Hosited");
 }
 
-// * Type 2 - Hoisting with Undefined Value:
+// ? Type 2 - Hoisting with Undefined Value:
 
 console.log(myVar); // Output: undefined
 var myVar = 10;
@@ -33,7 +33,7 @@ var a = 100;
 console.log(a);
 */
 
-// * Type 3 - Hoisting with Temporal Dead Zone (TDZ):
+// ? Type 3 - Hoisting with Temporal Dead Zone (TDZ):
 /*
 - Applies to variable declarations using let, const, and 
 class declarations.
@@ -59,7 +59,7 @@ const b = 300;
 console.log(b);
 */
 
-// * Type 4 - Hoisting with Side Effects:
+// ? Type 4 - Hoisting with Side Effects:
 
 // import "./someModule";
 // Side effects of the import may occur before the rest of the code

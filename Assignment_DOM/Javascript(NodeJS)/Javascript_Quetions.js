@@ -4,10 +4,10 @@
 - JSON and its properties in JS?
 - ===  vs ==  in javascript?
 - Pure Function in Javascript?
-- let vs var in Javascript?
-- Hoisting in Javascript?
-- Temporal Dead Zone in Js? 
-- Scope in JS?
+?- let vs var in Javascript?
+?- Hoisting in Javascript?
+?- Temporal Dead Zone in Js? 
+?- Scope in JS?
 - Strict Mode in JS?
 - Need of Strict Mode in Javascript?
 - Undefined in Javascript?
