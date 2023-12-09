@@ -1,5 +1,8 @@
 "use strict";
-
+/*
+!- Strict Mode in JS?
+!- Need of Strict Mode in Javascript?
+*/
 // 1.Error Prevention:
 
 // Error: Assignment to undeclared variable
@@ -20,4 +23,7 @@ It helps in writing more secure and robust code.
 
 // 4. Deprecating "Bad" Practices:
 
-// 5.Preventing Silent Errors:
+// 5. Preventing Silent Errors:
+
+//! What is BOM?
+console.log(window);

@@ -39,5 +39,34 @@
   Dynamically-typed language where the interpreter assigns variables 
   a type at runtime based on the variable's value at the time.
   
+  7. Java Script is Case Sensitve Language.
+  var myVariable = "Hello";
+  var myvariable = "World";
+*/
+
+/*
+ Java Vs JS
+
+-Java was developed by Sun Microsystems in the mid-1990s.
+-JavaScript was created by Netscape in the same period, around 1995.
+
+* Typing:
+-Java is a statically-typed language, 
+where variable types are declared before compilation.
+-JavaScript is a dynamically-typed language, 
+allowing variables to dynamically change types during runtime.
+
+* Object Models:
+-Java follows a class-based object-oriented programming paradigm.
+-JavaScript follows a prototype-based object-oriented programming paradigm.
+ Objects can be created dynamically during runtime
+
+
+* Execution Environment:
+- Java applications run on the JVM, allowing them to platform-independent.
+
+- JavaScript code is executed by web browsers, making it a client-side 
+scripting language. With the introduction of Node.js,
+JavaScript can also be used on the server side.
 
 */

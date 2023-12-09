@@ -8,18 +8,18 @@
 ?- Hoisting in Javascript?
 ?- Temporal Dead Zone in Js? 
 ?- Scope in JS?
-- Strict Mode in JS?
-- Need of Strict Mode in Javascript?
+?- Strict Mode in JS?
+?- Need of Strict Mode in Javascript?
 - Undefined in Javascript?
 - Null value in Js?
 - null vs undefined in JS?
 - undeclared vs undefined in JS?
-- JS Compiled or Interpreted ?
-- Case Sensitivity in JS?
-- Java vs JS?
-- BOM in JS?
-- JS as  a Dynamic Language?
-- Redeclaration of let and const variable?
+?- JS Compiled or Interpreted ?
+?- Case Sensitivity in JS?
+?- Java vs JS?
+?- BOM in JS?
+?- JS as  a Dynamic Language?
+?- Redeclaration of let and const variable?
 - Heap in JS?
 
  * JS Advanced :
