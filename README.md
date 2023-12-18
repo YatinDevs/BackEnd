@@ -10,7 +10,7 @@
 
 - Modules Content RoadMap :
 
-- 1 : Modules System, FS, REPL, NPM, Package.json
+- 1 : Modules System, FS, REPL, NPM, Package.json , Event Emitter
 - 2 : Web Server using Node JS
 - 3 : Express JS
 - 4 : REST APIs and CRUD
