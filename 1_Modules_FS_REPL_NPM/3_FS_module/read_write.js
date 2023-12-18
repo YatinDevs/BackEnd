@@ -69,7 +69,37 @@ fs.writeFile(
       (err) => {
         if (err) throw err;
         console.log("Append Completed.." + "case5.txt file appended!");
+
+        fs.rename(
+          path.join(__dirname, "files", "case5.txt"),
+          path.join(__dirname, "files", "case5_w_a_r.txt"),
+          (err) => {
+            if (err) throw err;
+            console.log("Rename Completed.." + "case5_w_a_r.txt file Renamed!");
+          }
+        );
       }
     );
   }
 );
+
+// Callback hell created
+// we are controlling flow but its getting tedious
+// In Nodejs we can control better with promises too.
+
+const fsPromises = require("fs").promises;
+
+const fileOps = async () => {
+  try {
+    const data = await fsPromises.readFile(
+      path.join(__dirname, "files", "demo.txt"),
+      "utf8"
+    );
+
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+fileOps();

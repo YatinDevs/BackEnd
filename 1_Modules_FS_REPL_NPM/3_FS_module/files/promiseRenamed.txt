@@ -1,0 +1,6 @@
+Content Started!
+Skip to main content
+Content Ended!
+writing data using Promise 
+
+ Appending File data with promises in Nodejs
