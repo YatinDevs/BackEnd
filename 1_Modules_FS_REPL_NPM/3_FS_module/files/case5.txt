@@ -1,0 +1,3 @@
+Writing in New File named case5 text file
+
+Appending in File named case5 text file

@@ -21,6 +21,16 @@ console.log(path.basename(__filename));
 console.log(path.extname(__filename));
 console.log(path.parse(__filename));
 
+// Look At :
+/*  
+  CommonJS way of Import Exporting Self Made Modules:
+   - math.js and server.js
+   - lib.js and index.js
+  ES6 way of Import Export modules :
+   - make Package.json - install module
+   - math.js and file.js
+*/
+
 // * > What is Node ?
 
 // Node.js is JavaScript runtime Enviornment built on top of V8 JS Engine.
