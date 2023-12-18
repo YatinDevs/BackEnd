@@ -1,4 +1,18 @@
 /*
+  Topics :
+  1. Objects In JS.
+  2. Functions In JS.
+  3. Array Methods/ String Methods. 
+  4. OOPS in JS.
+  5. Closures.
+  6. Callback/Timer.
+  7. Promise.
+  8. Async/Await.
+  9. AJAX/XHR.
+  11. fetch.
+  */
+
+/*
 
  * JS Basics :
 - JSON and its properties in JS?

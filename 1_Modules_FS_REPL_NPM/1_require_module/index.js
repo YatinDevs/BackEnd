@@ -14,3 +14,6 @@ let diff = lib.diff(40, 20);
 console.log(diff);
 
 // Generally In Nodejs we import PreMade Modules With this way.
+
+// -==================================================
+const math = req;
