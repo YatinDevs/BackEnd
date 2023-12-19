@@ -1,5 +1,5 @@
-// Web SErver in NODEJS
-// SSR
+// Web Server in NODEJS.
+// SSR - Server Side Rendering.
 
 const http = require("http");
 const fs = require("fs");
@@ -73,16 +73,16 @@ const server = http.createServer((req, res) => {
       res.end(JSON.stringify(data));
       break;
 
-    // case "/product":
-    //   res.setHeader("Content-Type", "text/html");
-    //   let modifiedIndex = index
-    //     .replace("**title**", product.title)
-    //     .replace("**url**", product.thumbnail)
-    //     .replace("**price**", product.price)
-    //     .replace("**rating**", product.rating);
+    case "/product":
+      res.setHeader("Content-Type", "text/html");
+      let modifiedIndex = index
+        .replace("**title**", product.title)
+        .replace("**url**", product.thumbnail)
+        .replace("**price**", product.price)
+        .replace("**rating**", product.rating);
 
-    //   res.end(modifiedIndex);
-    //   break;
+      res.end(modifiedIndex);
+      break;
 
     default:
       res.writeHead(404);
