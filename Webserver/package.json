@@ -2,10 +2,10 @@
   "name": "webserver",
   "version": "1.0.0",
   "description": "",
-  "main": "server2.js",
+  "main": "server3.js",
   "scripts": {
-    "start": "node server2.js",
-    "dev": "nodemon server2.js",
+    "start": "node server3.js",
+    "dev": "nodemon server3.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -4,12 +4,29 @@ const fs = require("fs");
 // const data = { age: 23 };
 const index = fs.readFileSync("index.html", "utf-8");
 const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
-const product = data.products[3];
+const products = data.products;
+// console.log(products);
 
 // Creating an HTTP tunneling proxy
 const server = http.createServer((req, res) => {
   console.log(req.url);
   console.log("server started");
+
+  if (req.url.startsWith("/product")) {
+    const id = req.url.split("/")[2];
+    const prd = products.find((p) => p.id === +id);
+    console.log(prd);
+    res.setHeader("Content-Type", "text/html");
+    let ModifiedIndex = index
+      .replace("**title**", prd.title)
+      .replace("**url**", prd.thumbnail)
+      .replace("**price**", prd.price)
+      .replace("**rating**", prd.rating);
+
+    //   let ModifiedIndex = index.replace("**url**", product.thumbnail);
+    res.end(ModifiedIndex); // SSR
+    return;
+  }
   // Routes - making endpoints
   switch (req.url) {
     case "/":
@@ -21,17 +38,17 @@ const server = http.createServer((req, res) => {
       res.end(JSON.stringify(data)); // Static Hosting - Backend
       break;
 
-    case "/product":
-      res.setHeader("Content-Type", "text/html");
-      let ModifiedIndex = index
-        .replace("**title**", product.title)
-        .replace("**url**", product.thumbnail)
-        .replace("**price**", product.price)
-        .replace("**rating**", product.rating);
+    // case "/product":
+    //   res.setHeader("Content-Type", "text/html");
+    //   let ModifiedIndex = index
+    //     .replace("**title**", product.title)
+    //     .replace("**url**", product.thumbnail)
+    //     .replace("**price**", product.price)
+    //     .replace("**rating**", product.rating);
 
-      //   let ModifiedIndex = index.replace("**url**", product.thumbnail);
-      res.end(ModifiedIndex); // SSR
-      break;
+    //   //   let ModifiedIndex = index.replace("**url**", product.thumbnail);
+    //   res.end(ModifiedIndex); // SSR
+    //   break;
 
     default:
       res.writeHead(404);
