@@ -1,9 +1,13 @@
 const fs = require("fs");
 const express = require("express"); // npm i express
-// > 5. Third-party Middleware :
+// > 5. Third-party Middleware :--------------------*
 const morgan = require("morgan"); // npm i morgan
 // create server with express
 const server = express();
+
+// 5.
+// server.use(morgan("default"));
+// server.use(morgan("dev"));
 
 // > 4. Built-in Middleware :
 // -  req.body will be readable now which was JSON type .
@@ -77,6 +81,12 @@ server.get("/", auth, (req, res) => {
   res.json({ type: "GET" });
 });
 
+// url parameter
+server.get("/product/:id", auth, (req, res) => {
+  console.log(req.params);
+  res.json({ type: "GET" });
+});
+
 server.post("/", auth, (req, res) => {
   res.json({ type: "POST" });
 });
@@ -109,3 +119,11 @@ server.get("/demo", (req, res) => {
 server.listen(8080, () => {
   console.log("server started");
 });
+
+/// 3 Ways of sending data :
+/*
+  req.query
+  req.body
+  req.params
+  
+*/
