@@ -1,14 +1,15 @@
 {
-  "name": "3_expressjs",
+  "name": "expressjs",
   "version": "1.0.0",
   "description": "",
-  "main": "info.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Yatin Chaudhari",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
