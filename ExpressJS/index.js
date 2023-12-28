@@ -78,9 +78,18 @@ const auth = (req, res, next) => {
   }
 };
 //  Case 2:  API - ENDPOINTS - Route
+
 // API ROOT, BASE Url ,example - google.com/api/v2 --> ahead -> params
-//! Start Products -> Resource - REST APIs
+//! Start Products -> Resource - REST APIs   C R U D
 // REST API type :
+
+// Create POST /products
+server.post("/products", (req, res) => {
+  console.log(req.body); // use built in body parser to fetch
+  products.push(req.body);
+  res.status(201).json(req.body);
+});
+
 // READ GET /products
 server.get("/products", (req, res) => {
   console.log("get products");
@@ -95,9 +104,38 @@ server.get("/products/:id", (req, res) => {
   res.json(product);
 });
 
-// Create POST  /products
-server.post("/products", (req, res) => {
-  res.json({ type: "POST" });
+// UPDATE PUT /products/:id -> Find Data in URL params
+server.put("/products/:id", (req, res) => {
+  console.log(req.params);
+  const id = parseInt(req.params.id);
+  console.log(typeof id);
+  const productIndex = products.findIndex((product) => product.id == id);
+  products.splice(productIndex, 1, { ...req.body, id: id });
+  res.status(201).json();
+});
+// update i.e put overrides previous data
+
+// UPDATE PATCH /products/:id -> Find Data in URL params
+server.patch("/products/:id", (req, res) => {
+  console.log(req.params);
+  const id = parseInt(req.params.id);
+  console.log(typeof id);
+  const productIndex = products.findIndex((product) => product.id == id);
+  const product = products[productIndex];
+  products.splice(productIndex, 1, { ...product, ...req.body });
+  res.status(201).json();
+});
+
+// Delete DELETE /products/:id -> Find Data in URL params
+server.delete("/products/:id", (req, res) => {
+  console.log(req.params);
+
+  const id = parseInt(req.params.id);
+  console.log(typeof id);
+  const productIndex = products.findIndex((product) => product.id == id);
+  const deletedProduct = products[productIndex];
+  products.splice(productIndex, 1);
+  res.status(201).json(deletedProduct);
 });
 
 // auth middleware for particular path
