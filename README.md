@@ -20,5 +20,5 @@
 - 8 : MERN - Connecting API with React
 - 9 : Deploying MERN app on live cloud server
 - 10 : Server Side Rendering - with EJS
-- 11: Authentication using JWT
+- 11:  Authentication using JWT
 - 12 : Events, Streams, Sockets - socket.io
