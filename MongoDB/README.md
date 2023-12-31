@@ -163,7 +163,6 @@
   }
   ]
 
-- db.products.find({ rating: {$gt:4.5} })
   [
   {
   \_id: ObjectId('658fea6d06e8db553ad20133'),
@@ -225,4 +224,77 @@
   ]
   }
   ]
+
+- test> show dbs
+- test> use ecommerce
+- local> ls
+- local> show collections
+- local> db.startup_log.find()
+
+- ecommerce> db.products.insertOne({})
+- db.products.insertMany([{},{},{}])
+
+- db.products.findOne({ title: 'Infinix INBOOK' })
+- returns singular object
+
+- ecommerce> db.products.find({ title: 'Infinix INBOOK' })
+- returns array as its for multiple values
+
+- ecommerce> db.products.find({ title: {$eq:'Infinix INBOOK'} })
+- eq operator - equal to
+
+- ecommerce> db.products.find({ title: {$gt:'Infinix INBOOK'} })
+- gt - greater than - compares maybe string length here
+- returns array as its form multiple values
+
+- ecommerce> db.products.find({ title: 'Infinix INBOOK' })
+- returns array as its form multiple
+
+- db.products.find({ rating: {$gt:4.5} })
 - db.products.find({ rating: {$lt:4.5} ,id:{$gt:1}})
+- db.products.find($and:[{rating: {$gt:4.5} },{id:{$gt:1}}])
+- db.products.find({$or:[{rating: {$gt:4.5} },{id:{$gt:5}}]})
+
+- db.products.find({'price':{$gt:600}},{'title':1,'price':1,'\_id':0})
+- to show result without id
+- fetching particular info with condition
+
+- update : $set
+- db.products.updateOne({'id':1},{$set:{'price':999}})
+
+ecommerce> db.products.updateOne({'id':1},{$set:{'price':999}})
+{
+acknowledged: true,
+insertedId: null,
+matchedCount: 1,
+modifiedCount: 1,
+upsertedCount: 0
+}
+
+- db.products.updateOne({'id':1},{$set:{'amount':999}})
+- create new property if name wrong we can restrain it
+
+- update + insert - overwrites
+- db.products.updateOne({'id':12},{$set:{'price':999}},{'upsert':1})
+- db.products.updateMany({'id':{$gt:9}},{$set:{'price':999}},{'upsert':1})
+
+- db.products.replaceOne({'id':3},{{'price':1999}})
+- replaces whole data with give data overrides
+
+- db.products.deleteOne({'\_id': ObjectId('658feaff06e8db553ad20135')})
+- db.products.deleteMany({price:999})
+
+- Mongodb Atlas
+
+- YatinDevs - userName
+- Nama21199@ - pass
+
+- to store password and security in Node
+- step 1: open node REPL
+- node
+- step 2: process.env
+- Enviornment variable
+
+instead we do :
+npm i dotenv
+dot.env
