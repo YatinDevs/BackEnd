@@ -35,7 +35,10 @@ exports.getAllData = async (req, res) => {
 
 // Read GET -> /products/:id
 exports.getData = async (req, res) => {
+  console.log(req);
+
   const id = req.params.id;
+  // console.log(req);
   console.log({ id });
   const product = await Product.findById(id);
   // const products = await Product.findOne({ _id: id });

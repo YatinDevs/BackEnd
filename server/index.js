@@ -1,8 +1,9 @@
+// nodejs core modules
 require("dotenv").config(); // for env configuration
-const express = require("express");
-const fs = require("fs");
-const morgan = require("morgan");
-const mongoose = require("mongoose");
+const express = require("express"); // express library
+const fs = require("fs"); // filessystem
+const morgan = require("morgan"); // morgan
+const mongoose = require("mongoose"); // log
 const cors = require("cors"); // consume cors similar to middle ware
 
 // server creation
